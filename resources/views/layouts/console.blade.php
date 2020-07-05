@@ -60,7 +60,7 @@
                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-cart"></i> Orders</a>
                     <div class="dropdown-menu shadow border-0" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="{{ route('console.orders.index') }}"><i class="fa fa-shopping-cart"></i> Data Orders</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-credit-card"></i> Payment Confirmation</a>
+                        <a class="dropdown-item" href="{{ route('console.payment.index') }}"><i class="fa fa-credit-card"></i> Payment Confirmation</a>
                     </div>
                 </li>
                 <li class="nav-item">

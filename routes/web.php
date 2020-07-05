@@ -74,6 +74,13 @@ Route::prefix('console')->group(function () {
 
         Route::livewire('/orders/receipt/{id}', 'console.orders.receipt')
         ->layout('layouts.console')->name('console.orders.receipt');
+
+        //console payment
+        Route::livewire('/payment', 'console.payment.index')
+        ->layout('layouts.console')->name('console.payment.index');
+
+        Route::livewire('/payment/{id}', 'console.payment.show')
+        ->layout('layouts.console')->name('console.payment.show');
     });
 
 });
