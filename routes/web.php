@@ -52,7 +52,16 @@ Route::prefix('console')->group(function () {
         Route::livewire('/products/edit/{id}', 'console.products.edit')
         ->layout('layouts.console')->name('console.products.edit');
 
-        
+        //console vouchers
+        Route::livewire('/vouchers', 'console.vouchers.index')
+        ->layout('layouts.console')->name('console.vouchers.index');
+
+        Route::livewire('/vouchers/create', 'console.vouchers.create')
+        ->layout('layouts.console')->name('console.vouchers.create');
+
+        Route::livewire('/vouchers/edit/{id}', 'console.vouchers.edit')
+        ->layout('layouts.console')->name('console.vouchers.edit');
+
     });
 
 });

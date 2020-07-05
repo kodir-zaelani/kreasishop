@@ -52,7 +52,7 @@
                     <div class="dropdown-menu shadow border-0" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="{{ route('console.categories.index') }}"><i class="fa fa-folder"></i> Categories</a>
                         <a class="dropdown-item" href="{{ route('console.products.index') }}"><i class="fa fa-shopping-bag"></i> Data Products</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-award"></i> Voucher</a>
+                        <a class="dropdown-item" href="{{ route('console.vouchers.index') }}"><i class="fa fa-award"></i> Voucher</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
