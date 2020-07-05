@@ -29,7 +29,9 @@ Route::prefix('console')->group(function () {
 
     Route::group(['middleware' => 'auth'], function(){
         //console dashboard
-        Route::livewire('/dashboard', 'console.dashboard.index')->layout('layouts.console')->name('console.dashboard.index');
+        Route::livewire('/dashboard', 'console.dashboard.index')->layout('layouts.console')
+        ->name('console.dashboard.index');
+
         //console categories
         Route::livewire('/categories', 'console.categories.index')
         ->layout('layouts.console')->name('console.categories.index');
@@ -39,6 +41,18 @@ Route::prefix('console')->group(function () {
 
         Route::livewire('/categories/edit/{id}', 'console.categories.edit')
         ->layout('layouts.console')->name('console.categories.edit');
+
+        //console products
+        Route::livewire('/products', 'console.products.index')
+        ->layout('layouts.console')->name('console.products.index');
+
+        Route::livewire('/products/create', 'console.products.create')
+        ->layout('layouts.console')->name('console.products.create');
+
+        Route::livewire('/products/edit/{id}', 'console.products.edit')
+        ->layout('layouts.console')->name('console.products.edit');
+
+        
     });
 
 });
