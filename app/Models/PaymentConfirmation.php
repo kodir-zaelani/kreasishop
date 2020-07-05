@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PaymentConfirmation extends Model
 {
-    protected $guardeed = [];
+    protected $guarded = [];
 
     public function customer()
     {
