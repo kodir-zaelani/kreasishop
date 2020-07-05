@@ -85,6 +85,16 @@ Route::prefix('console')->group(function () {
         //console sliders
         Route::livewire('/sliders', 'console.sliders.index')
         ->layout('layouts.console')->name('console.sliders.index');
+
+        //console users
+        Route::livewire('/users', 'console.users.index')
+        ->layout('layouts.console')->name('console.users.index');
+
+        Route::livewire('/users/create', 'console.users.create')
+        ->layout('layouts.console')->name('console.users.create');
+
+        Route::livewire('/users/edit/{id}', 'console.users.edit')
+        ->layout('layouts.console')->name('console.users.edit');
     });
 
 });
