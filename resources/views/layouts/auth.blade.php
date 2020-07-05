@@ -35,7 +35,7 @@
             <div class="col-md-4">
                 <div class="text-center mb-4">
                     <img src="{{ asset('images/basket.png') }}" style="width: 100px;background-color: #fff;border-radius: 50%;padding: 8px;">
-                    <h3 class="font-weight-bold mt-2">SK STORE</h3>
+                    <h3 class="font-weight-bold mt-2">KREASI STORE</h3>
                 </div>
                 @yield('content')
             </div>
@@ -50,5 +50,4 @@
         @endif
     </script>
 </body>
-
 </html>

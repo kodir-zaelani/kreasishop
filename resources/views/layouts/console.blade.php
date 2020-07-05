@@ -35,8 +35,7 @@
 <body style="background-color: #e2e8f0;">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #171d26!important">
-        <a class="navbar-brand font-weight-bold" href="#"><i
-                class="fa fa-carrot"></i> SK STORE</a>
+        <a class="navbar-brand font-weight-bold" href="{{ route('console.dashboard.index') }}"><i class="fa fa-carrot"></i> SK STORE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,8 +44,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto text-uppercase">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-chart-line"></i>
-                        Analytic</a>
+                    <a class="nav-link" href="{{ route('console.dashboard.index') }}"><i class="fa fa-chart-line"></i> Analytic</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
