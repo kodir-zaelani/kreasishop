@@ -203,7 +203,7 @@
             });
         });
     </script>
-    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('content').on('change', function(e){
             @this.set('content', e.editor.getData());
