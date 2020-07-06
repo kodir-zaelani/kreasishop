@@ -130,5 +130,9 @@ Route::prefix('customer')->group(function () {
 
     Route::livewire('/orders/{id}', 'customer.orders.show')
     ->layout('layouts.frontend')->name('customer.orders.show');
+
+    //profile
+    Route::livewire('/profile', 'customer.profile.index')
+    ->layout('layouts.frontend')->name('customer.profile.index');
 });
 
