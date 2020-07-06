@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+//home
+Route::livewire('/', 'frontend.home.index')
+->layout('layouts.frontend')->name('root');
 
 Route::get('/provinces', 'ApiController@getProvinces');
 Route::get('/cities', 'ApiController@getCities');
@@ -24,6 +28,11 @@ Route::post('/shipping', 'ApiController@getShipping');
 Route::get('/check_voucher', 'ApiController@check_voucher');
 Route::post('/checkout', 'ApiController@checkout');
 Route::post('/waybill', 'ApiController@getWaybill');
+
+View::composer('*', function($view) {
+    $global_categories = \App\Models\Category::latest()->take(6)->get();
+    $view->with('global_categories', $global_categories);
+});
 
 Route::group(['middleware' => 'guest'], function(){
 

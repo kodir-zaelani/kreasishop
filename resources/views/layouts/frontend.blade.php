@@ -44,10 +44,13 @@
             <!-- categories -->
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <i class="fa fa-list-ul"></i> CATEGORIES
+                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup=“true" aria-expanded="false"><i class="fa fa-list-ul"></i> CATEGORIES
                     </a>
+                    <div class="dropdown-menu border-0 shadow-sm dropdown-menu-right” aria-labelledby="navbarDropdownMenuLink">
+                    @foreach ($global_categories as $category)
+                        <a class="dropdown-item" href="/category/{{ $category->slug }}"><img src="{{ Storage::url('public/categories/' . $category->image) }}" class=“rounded" style="width: 20px"> {{ $category->name }}</a>
+                    @endforeach
+                    </div>
                 </li>
             </ul>
             <!-- end categories -->
