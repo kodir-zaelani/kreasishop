@@ -29,6 +29,18 @@ Route::get('/check_voucher', 'ApiController@check_voucher');
 Route::post('/checkout', 'ApiController@checkout');
 Route::post('/waybill', 'ApiController@getWaybill');
 
+//register customer
+Route::livewire('/customer/register', 'customer.auth.register')
+->layout('layouts.frontend')->name('customer.auth.register');
+//login customer
+Route::livewire('/customer/login', 'customer.auth.login')
+->layout('layouts.frontend')->name('customer.auth.login');
+
+//cart
+Route::livewire('/cart', 'frontend.cart.index')
+->layout('layouts.frontend')->name('frontend.cart.index');
+
+// Global View Composer frontend + Beckend
 View::composer('*', function($view) {
     $global_categories = \App\Models\Category::latest()->take(6)->get();
     $view->with('global_categories', $global_categories);
@@ -41,12 +53,7 @@ Route::group(['middleware' => 'guest'], function(){
     //logout page
     Route::livewire('/logout', 'console.logout')->layout('layouts.console')->name('console.logout');
 
-    //register customer
-    Route::livewire('/customer/register', 'customer.auth.register')
-    ->layout('layouts.frontend')->name('customer.auth.register');
-    //login customer
-    Route::livewire('/customer/login', 'customer.auth.login')
-    ->layout('layouts.frontend')->name('customer.auth.login');
+    
 });
 
 Route::prefix('console')->group(function () {
@@ -124,6 +131,7 @@ Route::prefix('console')->group(function () {
 });
 
 Route::prefix('customer')->group(function () {
+
 
     Route::group(['middleware' => 'auth:customer'], function(){
 

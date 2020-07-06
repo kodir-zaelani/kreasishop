@@ -36,7 +36,7 @@
 
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark text-white mb-5"
         style="background-color: #171d26!important;">
-        <a href="/" class="navbar-brand font-weight-bold"><i class="fa fa-carrot"></i> SK STORE</a>
+        <a href="/" class="navbar-brand font-weight-bold"><i class="fa fa-carrot"></i> KREASI STORE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-sk">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,7 +44,7 @@
             <!-- categories -->
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup=“true" aria-expanded="false"><i class="fa fa-list-ul"></i> CATEGORIES
+                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-list-ul"></i> CATEGORIES
                     </a>
                     <div class="dropdown-menu border-0 shadow-sm dropdown-menu-right” aria-labelledby="navbarDropdownMenuLink">
                     @foreach ($global_categories as $category)
@@ -71,11 +71,7 @@
             <ul class="nav navbar-nav navbar-right ml-auto">
                 
                 <!-- cart -->
-                <div>
-                    <li class="nav-item ml-3 mr-3">
-                        <a href="" class="btn btn-md shadow btn-outline-dark btn-block" style="color: #333;background-color: #fff;border-color: #fff;"><i class="fa fa-shopping-cart"></i> 0 | 0</a>
-                    </li>
-                </div>
+                <livewire:frontend.cart.header/>
                 <!-- end cart -->
 
                 @if (Auth::guard('customer')->check())
