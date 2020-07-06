@@ -23,6 +23,13 @@ Route::group(['middleware' => 'guest'], function(){
     Route::livewire('/login', 'console.login')->layout('layouts.auth')->name('console.login');
     //logout page
     Route::livewire('/logout', 'console.logout')->layout('layouts.console')->name('console.logout');
+
+    //register customer
+    Route::livewire('/customer/register', 'customer.auth.register')
+    ->layout('layouts.frontend')->name('customer.auth.register');
+    //login customer
+    Route::livewire('/customer/login', 'customer.auth.login')
+    ->layout('layouts.frontend')->name('customer.auth.login');
 });
 
 Route::prefix('console')->group(function () {
