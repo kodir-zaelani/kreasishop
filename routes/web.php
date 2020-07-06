@@ -98,3 +98,11 @@ Route::prefix('console')->group(function () {
     });
 
 });
+
+Route::get('/provinces', 'ApiController@getProvinces');
+Route::get('/cities', 'ApiController@getCities');
+Route::get('/districts', 'ApiController@getDistricts');
+Route::post('/shipping', 'ApiController@getShipping');
+Route::get('/check_voucher', 'ApiController@check_voucher');
+Route::post('/checkout', 'ApiController@checkout');
+Route::post('/waybill', 'ApiController@getWaybill');
