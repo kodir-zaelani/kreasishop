@@ -123,5 +123,12 @@ Route::prefix('customer')->group(function () {
         ->layout('layouts.frontend')->name('customer.dashboard.index');
 
     });
+
+    //orders
+    Route::livewire('/orders', 'customer.orders.index')
+    ->layout('layouts.frontend')->name('customer.orders.index');
+
+    Route::livewire('/orders/{id}', 'customer.orders.show')
+    ->layout('layouts.frontend')->name('customer.orders.show');
 });
 
