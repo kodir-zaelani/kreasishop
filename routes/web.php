@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/provinces', 'ApiController@getProvinces');
+Route::get('/cities', 'ApiController@getCities');
+Route::get('/districts', 'ApiController@getDistricts');
+Route::post('/shipping', 'ApiController@getShipping');
+Route::get('/check_voucher', 'ApiController@check_voucher');
+Route::post('/checkout', 'ApiController@checkout');
+Route::post('/waybill', 'ApiController@getWaybill');
+
 Route::group(['middleware' => 'guest'], function(){
 
     //login page
@@ -106,10 +114,14 @@ Route::prefix('console')->group(function () {
 
 });
 
-Route::get('/provinces', 'ApiController@getProvinces');
-Route::get('/cities', 'ApiController@getCities');
-Route::get('/districts', 'ApiController@getDistricts');
-Route::post('/shipping', 'ApiController@getShipping');
-Route::get('/check_voucher', 'ApiController@check_voucher');
-Route::post('/checkout', 'ApiController@checkout');
-Route::post('/waybill', 'ApiController@getWaybill');
+Route::prefix('customer')->group(function () {
+
+    Route::group(['middleware' => 'auth:customer'], function(){
+
+        //dashboard
+        Route::livewire('/dashboard', 'customer.dashboard.index')
+        ->layout('layouts.frontend')->name('customer.dashboard.index');
+
+    });
+});
+
