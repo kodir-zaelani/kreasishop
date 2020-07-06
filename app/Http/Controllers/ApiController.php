@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Invoice;
-use App\Voucher;
+use App\Models\Invoice;
+use App\Models\Voucher;
 use App\Facades\Cart;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;

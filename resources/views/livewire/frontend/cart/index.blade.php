@@ -1,4 +1,4 @@
-{{--  <div>  --}}
+<div>
     <div class="mb-5">
         <div class="container-fluid mb-lg-5" style="margin-top: 80px;">
     
@@ -771,4 +771,4 @@
             });
         });
     </script>
-{{--  </div>  --}}
+</div>

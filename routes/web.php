@@ -40,6 +40,10 @@ Route::livewire('/customer/login', 'customer.auth.login')
 Route::livewire('/cart', 'frontend.cart.index')
 ->layout('layouts.frontend')->name('frontend.cart.index');
 
+//payment after success checkout
+Route::livewire('/payment/{invoice_id}', 'frontend.payment.index')
+->layout('layouts.frontend')->name('frontend.payment.index')->middleware('auth:customer');
+
 // Global View Composer frontend + Beckend
 View::composer('*', function($view) {
     $global_categories = \App\Models\Category::latest()->take(6)->get();

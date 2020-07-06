@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Customer\Auth;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Customer;
+
 
 class Login extends Component
 {
