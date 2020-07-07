@@ -48,6 +48,10 @@ Route::livewire('/payment/{invoice_id}', 'frontend.payment.index')
 Route::livewire('/category/{slug}', 'frontend.category.show')
 ->layout('layouts.frontend')->name('frontend.category.show');
 
+//search
+Route::livewire('/search', 'frontend.search.index')
+->layout('layouts.frontend')->name('frontend.search.index');
+
 // Global View Composer frontend + Beckend
 View::composer('*', function($view) {
     $global_categories = \App\Models\Category::latest()->take(6)->get();

@@ -57,15 +57,17 @@
 
             <!-- search -->
             <div class="mx-2 my-auto d-inline" style="width: 45%">
-                <div class="input-group">
-                    <input type="text" class="form-control border border-right-0" placeholder="Search...">
-                    <span class="input-group-append">
-                        <button class="btn text-dark border border-left-0" style="background-color: white" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div>
-            </div>
+                <form action="{{ route('frontend.search.index') }}">
+                         <div class="input-group">
+                               <input type="text" name="q" class="form-control border border-right-0" placeholder="Search...">
+                               <span class="input-group-append">
+                                   <button class="btn text-dark border border-left-0" style="background-color: white" type="submit">
+                                       <i class="fa fa-search"></i>
+                                   </button>
+                               </span>
+                         </div>
+                 </form>
+           </div>
             <!-- end search -->
 
             <ul class="nav navbar-nav navbar-right ml-auto">
